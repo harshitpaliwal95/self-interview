@@ -82,14 +82,16 @@ let conceptQuestion = [
   "What you like about React? You solved the questions using Vanilla JS then asked the reason of why not using React JS to solve it",
   "Explain the differences between innerText and innerHTML",
 ];
-let counter = 0;
+let counterOne = 0;
+let counterTwo = 0;
+
 function get(type) {
   if (type == "coding") {
-    coding.innerHTML = codingQuestion[Math.floor(Math.random() * 10)];
+    coding.innerHTML = codingQuestion[counterOne++];
   } else {
     concept.innerHTML = "";
     for (let i = 0; i < 4; i++) {
-      concept.innerHTML += `${conceptQuestion[counter++]} <br>`;
+      concept.innerHTML += `${conceptQuestion[counterTwo++]} <br>`;
     }
   }
 }
